@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-              git fetch
-              sh 'git clone https://github.com/hermaneilze/D4ML.git'
-              sh 'git checkout main'
+                git 'https://github.com/hermaneilze/D4ML.git'
+		dir('JenkinsTF')
             }
         }
         stage('Terraform Init') {
