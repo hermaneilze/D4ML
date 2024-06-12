@@ -44,7 +44,7 @@ resource "aws_security_group" "sftp_security_group" {
 # Define the EC2 instance
 resource "aws_instance" "sftp_server" {
   ami                    = "ami-0395dbe049c244491" # Ubuntu in Frankfurt
-  instance_type          = "t2.micro"             # Small instance type for low traffic
+  instance_type          = "t2.small"             # Small instance type for low traffic
   key_name               = "hermane_key"          # Key pair for SSH access
   iam_instance_profile   = "role-d4ml-cloud9-deployment"  # IAM role for S3 access
 
